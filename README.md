@@ -18,9 +18,16 @@ Half adder is a combinational circuit that performs simple addition of two binar
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
 
+
+
 ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
 Figure -01 HALF ADDER
+
+
+
+![image](https://github.com/user-attachments/assets/bb5ced8e-faa9-4897-8f52-4848cabaacc1)
+
 
 **Half Subtractor**
 
@@ -29,11 +36,14 @@ The half-subtractor is a combinational circuit which is used to perform subtract
 Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
 
+
  ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
 
 Figure -02 HALF Subtractor
 
-**Truthtable**
+
+![image](https://github.com/user-attachments/assets/dc9f52fd-e417-4c2c-8301-55c1513c9a29)
+
 
 **Procedure**
 
@@ -49,13 +59,56 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+Developed by:B R SWETHA NIVASINI 
+RegisterNumber:24900367
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+F1
 
-Developed by: RegisterNumber:*/
+
+
+``` module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule ```
+
+
+F2
+
+```
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule ```
+
+
 
 **RTL Schematic**
 
+F1 
+
+![Screenshot (50)](https://github.com/user-attachments/assets/c0dbf808-b24c-4f90-b48e-c0de0c379912)
+
+F2
+
+![Screenshot (52)](https://github.com/user-attachments/assets/9617a0e1-4cef-40ea-93af-e6d1914f60b8)
+
+
+
 **Output/TIMING Waveform**
 
+F1
+
+![Screenshot (51)](https://github.com/user-attachments/assets/0b26f485-a6d3-49e6-9598-1412039b1b7f)
+
+F2
+
+![Screenshot (53)](https://github.com/user-attachments/assets/1bbfd631-91e3-43b9-aa6e-e08ab402f555)
+
+
+
 **Result:**
+Thus designing a half adder and half subtractor circuit and its truth table is verified in Quartus using Verilog programming.
